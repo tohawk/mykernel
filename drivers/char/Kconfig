@@ -679,6 +679,13 @@ config VIRTIO_CONSOLE
 	help
 	  Virtio console for use with lguest and other hypervisors.
 
+config MINI2440_ADC
+	bool "ADC driver for MINI2440 board"
+	depends on MACH_MINI2440
+	default y if MACH_MINI2440
+	help
+		this is a ADC driver for mini2440 board
+
 
 config HVCS
 	tristate "IBM Hypervisor Virtual Console Server support"
